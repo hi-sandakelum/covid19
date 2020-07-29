@@ -20,7 +20,7 @@ class App{
 
     logData(data){
         // console.log(data);
-        let countriList = ""
+        let countriList = "<option>--select country--</option>"
         data.forEach(countri => {
             // console.log(countri);
             countriList = countriList + "<option value = '"+countri.name+"' >"+countri.name+"</option>";
