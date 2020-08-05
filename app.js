@@ -7,10 +7,10 @@ const c_name = document.querySelector("#c_name")
 const tbody = document.querySelector("#tbody")
 const chart = document.querySelector("#pychart")
 const str = {
-    t:"",
-    p:"",
-    s:"",
-    m:"",
+    t:"තහවුරු කළ",
+    p:"ප්‍රතිකාර ලබන",
+    s:"සුවය ලැබූ",
+    m:"මරණ",
 }
 class App{
     // data = 
