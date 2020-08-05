@@ -5,6 +5,13 @@
 const se = document.querySelector("#sel");
 const c_name = document.querySelector("#c_name")
 const tbody = document.querySelector("#tbody")
+const chart = document.querySelector("#pychart")
+const str = {
+    t:"",
+    p:"",
+    s:"",
+    m:"",
+}
 class App{
     // data = 
     
@@ -26,6 +33,7 @@ class App{
             countriList = countriList + "<option value = '"+countri.name+"' >"+countri.name+"</option>";
         });
         se.innerHTML = countriList;
+        
 
     }
 
@@ -40,6 +48,8 @@ class App{
     getCountriStatusAll(name,data){
         c_name.innerHTML = name
         tbody.innerHTML = "<tr><td>"+data.confirmed.value+"</td><td>"+data.recovered.value+"</td><td>"+data.deaths.value+"</td></tr>"
+        
+        chart.src = "https://image-charts.com/chart?cht=pd&chd=<chart_data>&chs=700x190"
 
     }
 }
