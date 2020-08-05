@@ -48,8 +48,8 @@ class App{
     getCountriStatusAll(name,data){
         c_name.innerHTML = name
         tbody.innerHTML = "<tr><td>"+data.confirmed.value+"</td><td>"+data.recovered.value+"</td><td>"+data.deaths.value+"</td></tr>"
-        
-        chart.src = "https://image-charts.com/chart?cht=pd&chd=<chart_data>&chs=700x190"
+        let p = data.confirmed.value-(data.recovered.value+data.deaths.value)
+        chart.src = "https://image-charts.com/chart?cht=pd&chd=t:"+p+","+data.recovered.value+","+data.deaths.value+"&chs=700x190&chdl="+str.p+"|"+str.s+"|"+str.m+"&chli="+data.confirmed.value
 
     }
 }
