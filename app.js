@@ -7,10 +7,10 @@ const c_name = document.querySelector("#c_name")
 const tbody = document.querySelector("#tbody")
 const chart = document.querySelector("#pychart")
 const str = {
-    t:"තහවුරු කළ",
-    p:"ප්‍රතිකාර ලබන",
-    s:"සුවය ලැබූ",
-    m:"මරණ",
+    t:"confirmed",
+    p:"Active Cases",
+    s:"recovered",
+    m:"deaths",
 }
 class App{
     // data = 
@@ -49,7 +49,7 @@ class App{
         c_name.innerHTML = name
         tbody.innerHTML = "<tr><td>"+data.confirmed.value+"</td><td>"+data.recovered.value+"</td><td>"+data.deaths.value+"</td></tr>"
         let p = data.confirmed.value-(data.recovered.value+data.deaths.value)
-        chart.src = "https://image-charts.com/chart?cht=pd&chd=a:"+p+","+data.recovered.value+","+data.deaths.value+"&chs=700x190&chdl="+str.p+"|"+str.s+"|"+str.m+"&chli="+data.confirmed.value
+        chart.src = "https://image-charts.com/chart?cht=pd&chd=a:"+p+","+data.recovered.value+","+data.deaths.value+"&chs=700x190&chdl="+str.p+"|"+str.s+"|"+str.m+"&chli="+data.confirmed.value+"&chco=<#f79b45>|<#5fff14>|<#f70000>"
 
     }
 }
