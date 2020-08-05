@@ -49,7 +49,7 @@ class App{
         c_name.innerHTML = name
         tbody.innerHTML = "<tr><td>"+data.confirmed.value+"</td><td>"+data.recovered.value+"</td><td>"+data.deaths.value+"</td></tr>"
         let p = data.confirmed.value-(data.recovered.value+data.deaths.value)
-        chart.src = "https://image-charts.com/chart?cht=pd&chd=a:"+p+","+data.recovered.value+","+data.deaths.value+"&chs=600x300&chdl="+str.p+"|"+str.s+"|"+str.m+"&chli="+data.confirmed.value+"&chco=f79b45|5fff14|f70000&chl="+p+"|"+data.recovered.value+"|"+data.deaths.value
+        chart.src = "https://image-charts.com/chart?cht=pd&chd=a:"+p+","+data.recovered.value+","+data.deaths.value+"&chs=600x600&chdl="+str.p+"|"+str.s+"|"+str.m+"&chli="+data.confirmed.value+"&chco=f79b45|5fff14|f70000&chl="+p+"|"+data.recovered.value+"|"+data.deaths.value
 
     }
 }
